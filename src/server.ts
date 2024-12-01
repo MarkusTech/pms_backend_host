@@ -57,10 +57,8 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(compression());
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://productmanagementsuite.vercel.app/"
-  );
+  res.setHeader("Access-Control-Allow-Origin", "*"); // For testing
+
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Allow-Credentials", "true");
