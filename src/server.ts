@@ -66,7 +66,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-// Enable trust proxy for reverse proxies (e.g., Nginx, Heroku)
 app.set("trust proxy", 1);
 
 // Your rate-limiter configuration
